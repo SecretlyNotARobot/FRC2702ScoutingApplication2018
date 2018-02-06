@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>2702 Scouting Form</title>
+    <title>2702 Scouting Form</title>
 </head>
-<script src="code.js"></script>
-<script src="qrcode.js"></script>
+    <link rel="stylesheet" href="material.min.css"/>
+    <script src="./material.min.js"></script>
+    <script src="code.js"></script>
+    <script src="qrcode.js"></script>
 <style>
 * {
   font-family: Avenir, Helvetica, sans-serif;
@@ -27,19 +29,31 @@ th {
         <input type="text" id="teamNumberId" name="teamNumber" value="2702"/>
       </h4>
       <h4>Alliance Colour:
-        <input type="radio" name="allianceColour" value="red" checked> Red
-        <input type="radio" name="allianceColour" value="blue"> Blue
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="alliance-red">
+              <input type="radio" class="mdl-radio__button" name="allianceColour" ID="alliance-red" value="red" checked>
+              <span class="mdl-radio__label">Red</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="alliance-blue">
+              <input type="radio" class="mdl-radio__button" name="allianceColour" ID="alliance-blue" value="blue">
+              <span class="mdl-radio__label">Blue</span>
+          </label>
       </h4>
     </div>
 
     <div id="Autonomous">
       <h1>Autonomous:</h1>
       <h2>Auto Line:</h2>
-        <input type="radio" name="autoline" value="true" checked> Crossed<br />
-        <input type="radio" name="autoline" value="false"> Not Crossed
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="autoline-true">
+            <input type="radio" class="mdl-radio__button" name="autoline" ID="autoline-true" value="true" checked>
+            <span class="mdl-radio__label">Crossed</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="autoline-false">
+            <input type="radio" class="mdl-radio__button" name="autoline" ID="autoline-false" value="red" checked>
+            <span class="mdl-radio__label">Not Crossed</span>
+        </label>
       <h2>Ownership:</h2>
         <h3>Scale Activated: <span id="autoScaleValue"></span></h3>
-        <button type="button" style="width: 200px;height: 20px;" onclick="addRowToTable('autoScale')">Add row!</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="addRowToTable('autoScale')">Add row!</button>
         <table border = "1" id="autoScale">
             <tr>
               <th>Scale Achieved</th>
@@ -60,7 +74,7 @@ th {
           </table>
           <!--<input type="range" min="1" max="100" value="50" id="ownershipScaleId">-->
         <h3>Switch Activated: <span id="autoSwitchValue"></h3>
-          <button type="button" style="width: 200px;height: 20px;" onclick="addRowToTable('autoSwitch')">Add row!</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="addRowToTable('autoSwitch')">Add row!</button>
           <table border = "1" id="autoSwitch">
             <tr>
               <th>Scale Achieved</th>
@@ -85,7 +99,7 @@ th {
       <h1>Teleloperated:</h1>
       <h2>Ownership:</h2>
         <h3>Scale Activated: <span id="teleopScaleValue"></h3>
-          <button type="button" style="width: 200px;height: 20px;" onclick="addRowToTable('teleopScale')">Add row!</button>
+          <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="addRowToTable('teleopScale')">Add row!</button>
           <table border = "1" id="teleopScale">
             <tr>
               <th>Scale Achieved</th>
@@ -106,7 +120,7 @@ th {
           </table>
           <!--<input type="range" min="1" max="100" value="50" id="teleScaleId">-->
         <h3>Switch Activated: <span id="teleopSwitchValue"></h3>
-          <button type="button" style="width: 200px;height: 20px;" onclick="addRowToTable('teleopSwitch')">Add row!</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="addRowToTable('teleopSwitch')">Add row!</button>
           <table border = "1" id="teleopSwitch">
             <tr>
               <th>Scale Achieved</th>
@@ -129,7 +143,8 @@ th {
       <h2>Power Ups:</h2>
         <h3>Cubes Scored In...</h3>
           <h4>Levitate:
-            <input type="radio" name="levitate" value="0" checked> 0
+            <!--  <input name="levitate" class="mdl-slider mdl-js-slider" type="range" min="0" max="3" value="0" step="1" tabindex="0">-->
+             <input type="radio" name="levitate" value="0" checked> 0
             <input type="radio" name="levitate" value="1"> 1
             <input type="radio" name="levitate" value="2"> 2
             <input type="radio" name="levitate" value="3"> 3
@@ -207,7 +222,7 @@ th {
         </h4>
     </div>
   </form>
-  <button onclick="myFunction()" style="
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="myFunction()" style="
     margin-bottom: 100px;
     width: 100px;
     height: 30px;
